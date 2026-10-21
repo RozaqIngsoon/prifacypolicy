@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kebijakan Privasi - Sedulurku</title>
+  <meta name="description" content="Kebijakan Privasi Aplikasi Silsilah Keluarga Sedulurku untuk Google Play Store.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #15803d;
+      --primary-dark: #166534;
+      --primary-light: #dcfce7;
+      --text-main: #1f2937;
+      --text-muted: #4b5563;
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --border-color: #e2e8f0;
+      --accent: #ca8a04;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      line-height: 1.65;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(135deg, #15803d 0%, #166534 100%);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(21, 128, 61, 0.15);
+    }
+
+    .header-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+
+    .meta {
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+
+    .lang-switcher {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .lang-btn {
+      background: white;
+      color: var(--primary-dark);
+      border: none;
+      padding: 8px 18px;
+      border-radius: 24px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .lang-btn.active {
+      background: #fef08a;
+      color: #854d0e;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .container {
+      max-width: 880px;
+      margin: -20px auto 40px;
+      padding: 0 16px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border-radius: 16px;
+      padding: 36px 32px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.04);
+      border: 1px solid var(--border-color);
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      color: var(--primary-dark);
+      margin-top: 24px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 2px solid var(--primary-light);
+      padding-bottom: 8px;
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      color: var(--text-main);
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: var(--text-muted);
+    }
+
+    ul {
+      margin-bottom: 16px;
+      padding-left: 24px;
+      color: var(--text-muted);
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    strong {
+      color: var(--text-main);
+    }
+
+    .info-box {
+      background-color: #f0fdf4;
+      border-left: 4px solid var(--primary);
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+      color: #166534;
+    }
+
+    .info-box p {
+      color: #166534;
+      margin-bottom: 0;
+    }
+
+    .deletion-box {
+      background-color: #fffbeb;
+      border-left: 4px solid var(--accent);
+      padding: 18px 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .deletion-box p {
+      color: #78350f;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    .lang-section {
+      display: block;
+    }
+
+    .lang-section.hidden {
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.6rem; }
+      .card { padding: 24px 18px; }
+      header { padding: 30px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <span class="badge">Kebijakan Privasi Resmi</span>
+      <h1 id="page-title">Kebijakan Privasi Sedulurku</h1>
+      <p class="meta">Aplikasi Silsilah &amp; Pohon Keluarga Digital</p>
+      <div class="lang-switcher">
+        <button class="lang-btn active" id="btn-id" onclick="switchLanguage('id')">🇮🇩 Bahasa Indonesia</button>
+        <button class="lang-btn" id="btn-en" onclick="switchLanguage('en')">🇬🇧 English</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      
+      <!-- SEKSI BAHASA INDONESIA -->
+      <section id="section-id" class="lang-section">
+        <div class="info-box">
+          <p><strong>Tanggal Efektif:</strong> 21 Oktober 2026<br>
+          <strong>Nama Aplikasi:</strong> Sedulurku<br>
+          <strong>Pengembang:</strong> RozaqIngsoon<br>
+          <strong>Kontak:</strong> <a href="mailto:email.ingsoon@gmail.com">email.ingsoon@gmail.com</a> / <a href="mailto:s3nyuman1s@gmail.com">s3nyuman1s@gmail.com</a></p>
+        </div>
+
+        <p>Selamat datang di <strong>Sedulurku</strong>. Privasi Anda sangat penting bagi kami. Kebijakan Privasi ini menjelaskan bagaimana aplikasi <strong>Sedulurku</strong> mengumpulkan, memproses, menyimpan, dan melindungi informasi pribadi pengguna sesuai dengan kebijakan Google Play Store.</p>
+
+        <h2>1. Informasi yang Kami Kumpulkan</h2>
+        <p>Aplikasi Sedulurku mengumpulkan data guna memfasilitasi pembuatan, penyimpanan, dan kolaborasi silsilah keluarga:</p>
+
+        <h3>A. Informasi Akun Pengguna</h3>
+        <p>Ketika Anda masuk menggunakan <strong>Google Sign-In</strong>, kami menerima:</p>
+        <ul>
+          <li>Nama lengkap pengguna (<em>displayName</em>)</li>
+          <li>Alamat email (<em>email</em>)</li>
+          <li>Tautan foto profil (<em>photoUrl</em>)</li>
+          <li>ID unik pengguna (<em>Firebase UID</em>)</li>
+        </ul>
+        <p>Data ini digunakan secara eksklusif untuk autentikasi, mengamankan hak kepemilikan pohon keluarga, serta memfasilitasi persetujuan anggota.</p>
+
+        <h3>B. Data Silsilah Keluarga (Genealogi)</h3>
+        <p>Informasi yang Anda atau admin trah masukkan ke dalam aplikasi meliputi:</p>
+        <ul>
+          <li>Nama lengkap, nama panggilan, dan gelar kehormatan</li>
+          <li>Jenis kelamin</li>
+          <li>Tanggal dan tahun lahir serta tanggal kematian (bagi kerabat yang telah wafat)</li>
+          <li>Hubungan silsilah (orang tua, anak, pasangan, mantan pasangan)</li>
+          <li>Nomor telepon dan alamat domisili (opsional)</li>
+          <li>Catatan atau biografi singkat keluarga</li>
+        </ul>
+
+        <h3>C. Izin Perangkat (Device Permissions)</h3>
+        <ul>
+          <li><strong>Kamera (<code>android.permission.CAMERA</code>):</strong> Hanya diakses saat Anda menggunakan fitur pemindai QR untuk menghubungkan profil ke simpul silsilah atau bergabung ke grup Trah. Kami tidak mengambil foto, tidak merekam video, dan tidak menyimpan rekaman visual apa pun.</li>
+          <li><strong>Internet (<code>android.permission.INTERNET</code>):</strong> Digunakan untuk menyinkronkan data silsilah keluarga ke cloud Firestore, login, dan penayangan iklan Google AdMob.</li>
+        </ul>
+
+        <h2>2. Layanan Pihak Ketiga</h2>
+        <p>Aplikasi ini mengintegrasikan layanan pihak ketiga tepercaya:</p>
+        <ul>
+          <li><strong>Google Firebase:</strong> Digunakan untuk autentikasi pengguna dan penyimpanan cloud database yang aman. (<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Kebijakan Privasi Firebase</a>)</li>
+          <li><strong>Google Mobile Ads (AdMob):</strong> Menampilkan iklan pendukung. Google AdMob dapat mengumpulkan identifikasi perangkat (seperti Google Advertising ID / GAID) untuk penayangan iklan yang sesuai. (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Kebijakan Privasi Google</a>)</li>
+        </ul>
+
+        <h2>3. Penggunaan &amp; Perlindungan Data</h2>
+        <p>Data yang dikumpulkan hanya digunakan untuk fungsionalitas aplikasi Sedulurku, yaitu:</p>
+        <ul>
+          <li>Menampilkan dan mengelola diagram pohon keluarga interaktif.</li>
+          <li>Mencetak dan mengekspor dokumen silsilah keluarga ke format PDF.</li>
+          <li>Mengelola izin kolaborasi trah antar-anggota keluarga.</li>
+        </ul>
+        <p><strong>Kami tidak pernah menjual, menyewakan, atau memperjualbelikan data pribadi atau silsilah keluarga Anda kepada pihak mana pun.</strong></p>
+
+        <h2>4. Permintaan Penghapusan Akun &amp; Data (Data Deletion)</h2>
+        <div class="deletion-box">
+          <p><strong>Hak Penghapusan Data Pengguna:</strong></p>
+          <p>Anda memiliki hak penuh untuk meminta penghapusan akun serta seluruh data silsilah keluarga yang tersimpan di server kami kapan saja.</p>
+          <p style="margin-top: 10px;"><strong>Cara Mengajukan Penghapusan:</strong></p>
+          <ol style="margin-left: 20px; color: #78350f;">
+            <li>Melalui aplikasi: Pemilik trah dapat langsung menghapus simpul anggota atau menghapus seluruh trah yang dikelolanya.</li>
+            <li>Melalui email: Kirimkan email ke <a href="mailto:email.ingsoon@gmail.com" style="color: #92400e; text-decoration: underline;"><strong>email.ingsoon@gmail.com</strong></a> dengan subjek <em>"Permintaan Penghapusan Data Akun Sedulurku"</em> dan sertakan email akun yang terdaftar. Data akun dan entri terkait akan dihapus secara permanen dari basis data dalam waktu <strong>7–14 hari kerja</strong>.</li>
+          </ol>
+        </div>
+
+        <h2>5. Privasi Anak (Children's Privacy)</h2>
+        <p>Aplikasi Sedulurku ditujukan untuk penggunaan keluarga umum dan dikelola oleh orang dewasa. Data mengenai anggota keluarga di bawah usia 13 tahun hanya dapat dimasukkan oleh orang tua atau wali resmi untuk kepentingan pencatatan bagan silsilah keluarga, bukan untuk tujuan komersial atau pelacakan profil anak.</p>
+
+        <h2>6. Kontak Kami</h2>
+        <p>Jika ada pertanyaan atau permintaan terkait kebijakan privasi ini, silakan hubungi pengembang melalui:</p>
+        <ul>
+          <li>Email: <a href="mailto:email.ingsoon@gmail.com">email.ingsoon@gmail.com</a> atau <a href="mailto:s3nyuman1s@gmail.com">s3nyuman1s@gmail.com</a></li>
+          <li>Repositori GitHub: <a href="https://github.com/RozaqIngsoon/prifacypolicy" target="_blank" rel="noopener">https://github.com/RozaqIngsoon/prifacypolicy</a></li>
+        </ul>
+      </section>
+
+      <!-- SEKSI ENGLISH -->
+      <section id="section-en" class="lang-section hidden">
+        <div class="info-box">
+          <p><strong>Effective Date:</strong> October 21, 2026<br>
+          <strong>Application:</strong> Sedulurku (Digital Family Tree)<br>
+          <strong>Developer:</strong> RozaqIngsoon<br>
+          <strong>Contact:</strong> <a href="mailto:email.ingsoon@gmail.com">email.ingsoon@gmail.com</a> / <a href="mailto:s3nyuman1s@gmail.com">s3nyuman1s@gmail.com</a></p>
+        </div>
+
+        <p>Welcome to <strong>Sedulurku</strong>. We respect your privacy and are committed to safeguarding your personal data in accordance with Google Play Developer Policies.</p>
+
+        <h2>1. Information We Collect</h2>
+        <h3>A. Account Information</h3>
+        <p>When signing in via <strong>Google Sign-In</strong>, we collect your display name, email address, profile picture URL, and Firebase UID for authentication and permissions management.</p>
+
+        <h3>B. Family Genealogy Data</h3>
+        <p>Information you optionally record in your family tree includes names, nicknames, gender, birth/death dates, kinship links (parents, spouses, children), contact numbers, addresses, and family notes.</p>
+
+        <h3>C. Device Permissions</h3>
+        <ul>
+          <li><strong>Camera (<code>android.permission.CAMERA</code>):</strong> Used strictly to scan QR codes for linking member profiles or joining a family group. No photographs or video feeds are captured, recorded, or saved.</li>
+          <li><strong>Internet (<code>android.permission.INTERNET</code>):</strong> Used to synchronize data with Firebase Cloud Firestore and load advertisements.</li>
+        </ul>
+
+        <h2>2. Third-Party Services</h2>
+        <ul>
+          <li><strong>Google Firebase:</strong> Cloud authentication and database management. (<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy Policy</a>)</li>
+          <li><strong>Google AdMob:</strong> Serves advertisements. May process device identifiers like Advertising ID (GAID). (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>)</li>
+        </ul>
+
+        <h2>3. Data Deletion Policy</h2>
+        <div class="deletion-box">
+          <p><strong>Right to Delete Data:</strong> Users have the right to request deletion of their account and all personal information.</p>
+          <p>To request complete account deletion, please email <a href="mailto:email.ingsoon@gmail.com" style="color: #92400e; text-decoration: underline;"><strong>email.ingsoon@gmail.com</strong></a> with the subject <em>"Sedulurku Data Deletion Request"</em>. Your account and associated cloud data will be permanently purged within <strong>7–14 business days</strong>.</p>
+        </div>
+
+        <h2>4. Contact Us</h2>
+        <p>For questions or inquiries regarding this privacy statement, please email <a href="mailto:email.ingsoon@gmail.com">email.ingsoon@gmail.com</a>.</p>
+      </section>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Sedulurku by RozaqIngsoon. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function switchLanguage(lang) {
+      const secId = document.getElementById('section-id');
+      const secEn = document.getElementById('section-en');
+      const btnId = document.getElementById('btn-id');
+      const btnEn = document.getElementById('btn-en');
+      const title = document.getElementById('page-title');
+
+      if (lang === 'en') {
+        secId.classList.add('hidden');
+        secEn.classList.remove('hidden');
+        btnEn.classList.add('active');
+        btnId.classList.remove('active');
+        title.innerText = 'Sedulurku Privacy Policy';
+      } else {
+        secEn.classList.add('hidden');
+        secId.classList.remove('hidden');
+        btnId.classList.add('active');
+        btnEn.classList.remove('active');
+        title.innerText = 'Kebijakan Privasi Sedulurku';
+      }
+    }
+  </script>
+</body>
+</html>
