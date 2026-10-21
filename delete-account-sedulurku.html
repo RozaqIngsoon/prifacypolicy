@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Permintaan Penghapusan Akun &amp; Data - Sedulurku</title>
+  <meta name="description" content="Halaman resmi permohonan penghapusan akun dan data pengguna aplikasi Sedulurku sesuai kebijakan Google Play Store.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --primary: #15803d;
+      --primary-dark: #166534;
+      --primary-light: #dcfce7;
+      --text-main: #1f2937;
+      --text-muted: #4b5563;
+      --bg-body: #f8fafc;
+      --bg-card: #ffffff;
+      --border-color: #e2e8f0;
+      --danger: #dc2626;
+      --danger-dark: #b91c1c;
+      --danger-light: #fee2e2;
+      --accent: #ca8a04;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      line-height: 1.65;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(135deg, #15803d 0%, #166534 100%);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(21, 128, 61, 0.15);
+    }
+
+    .header-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #ffffff;
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      line-height: 1.25;
+      color: #ffffff;
+    }
+
+    header p,
+    .meta {
+      font-size: 1.05rem;
+      color: #ffffff !important;
+      font-weight: 500;
+      opacity: 0.95;
+    }
+
+    .lang-switcher {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .lang-btn {
+      background: white;
+      color: var(--primary-dark);
+      border: none;
+      padding: 8px 18px;
+      border-radius: 24px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .lang-btn.active {
+      background: #fef08a;
+      color: #854d0e;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+      max-width: 840px;
+      margin: -20px auto 40px;
+      padding: 0 16px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border-radius: 16px;
+      padding: 36px 32px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+      border: 1px solid var(--border-color);
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-size: 1.35rem;
+      color: var(--primary-dark);
+      margin-top: 28px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 2px solid var(--primary-light);
+      padding-bottom: 8px;
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      color: var(--text-main);
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: var(--text-muted);
+    }
+
+    ul, ol {
+      margin-bottom: 16px;
+      padding-left: 24px;
+      color: var(--text-muted);
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    strong {
+      color: var(--text-main);
+    }
+
+    .info-box {
+      background-color: #f0fdf4;
+      border-left: 4px solid var(--primary);
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+      color: #166534;
+    }
+
+    .info-box p {
+      color: #166534;
+      margin-bottom: 0;
+    }
+
+    .info-box a {
+      color: #166534;
+      text-decoration: underline;
+    }
+
+    .warning-box {
+      background-color: #fff1f2;
+      border-left: 4px solid var(--danger);
+      padding: 18px 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .warning-box p {
+      color: #9f1239;
+      margin-bottom: 6px;
+    }
+
+    .warning-box ul {
+      margin-bottom: 0;
+      color: #9f1239;
+    }
+
+    /* Form Card Styles */
+    .form-box {
+      background: #fdfefe;
+      border: 2px dashed #cbd5e1;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      color: var(--text-main);
+      background-color: #ffffff;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(21, 128, 61, 0.15);
+    }
+
+    .btn-submit {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: var(--danger);
+      color: #ffffff;
+      padding: 12px 24px;
+      border-radius: 8px;
+      border: none;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      width: 100%;
+    }
+
+    .btn-submit:hover {
+      background-color: var(--danger-dark);
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.15s ease;
+    }
+
+    a:hover {
+      color: var(--primary-dark);
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      color: #6b7280;
+    }
+
+    footer p {
+      color: #6b7280;
+      margin-bottom: 0;
+    }
+
+    .lang-section {
+      display: block;
+    }
+
+    .lang-section.hidden {
+      display: none;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .card {
+        padding: 24px 18px;
+      }
+
+      header {
+        padding: 30px 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-content">
+      <span class="badge">Google Play Data Safety</span>
+      <h1 id="page-title">Permintaan Penghapusan Akun &amp; Data</h1>
+      <p class="meta">Aplikasi Sedulurku (Pohon Silsilah Keluarga)</p>
+      <div class="lang-switcher">
+        <button class="lang-btn active" id="btn-id" onclick="switchLanguage('id')">🇮🇩 Bahasa Indonesia</button>
+        <button class="lang-btn" id="btn-en" onclick="switchLanguage('en')">🇬🇧 English</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="card">
+
+      <!-- SEKSI BAHASA INDONESIA -->
+      <section id="section-id" class="lang-section">
+        <div class="info-box">
+          <p>
+            <strong>Aplikasi:</strong> Sedulurku (Digital Family Tree)<br>
+            <strong>Pengembang:</strong> Rozik-Bolu<br>
+            <strong>Kontak Bantuan:</strong> <a href="mailto:s3nyuman1s@gmail.com">s3nyuman1s@gmail.com</a>
+          </p>
+        </div>
+
+        <p>Sesuai dengan ketentuan kebijakan Google Play Store mengenai <em>Data Safety &amp; Account Deletion</em>, halaman ini disediakan bagi pengguna aplikasi <strong>Sedulurku</strong> yang ingin meminta penghapusan akun beserta seluruh data pribadi yang tersimpan di basis data kami.</p>
+
+        <h2>1. Cara Menghapus Akun &amp; Data</h2>
+        <p>Anda dapat menghapus data Anda melalui dua cara:</p>
+
+        <h3>Opsi A: Langsung dari Aplikasi Sedulurku</h3>
+        <ol>
+          <li>Buka aplikasi <strong>Sedulurku</strong> di perangkat Android Anda.</li>
+          <li>Masuk ke menu <strong>Kelola Trah / Pengaturan Trah</strong> jika Anda adalah pemilik Trah keluarga.</li>
+          <li>Anda dapat menghapus simpul anggota keluarga atau menghapus seluruh Trah yang Anda buat.</li>
+          <li>Lakukan <strong>Keluar (Sign Out)</strong> dari akun Anda.</li>
+        </ol>
+
+        <h3>Opsi B: Mengajukan Permintaan Penghapusan Permanen via Web / Email</h3>
+        <p>Jika aplikasi sudah dicopot pemasangannya (*uninstalled*) atau Anda ingin seluruh data akun Firebase dihapus secara permanen dari server kami, gunakan formulir di bawah ini atau kirim email langsung ke <a href="mailto:s3nyuman1s@gmail.com">s3nyuman1s@gmail.com</a>.</p>
+
+        <div class="warning-box">
+          <p><strong>⚠️ Konsekuensi Penghapusan Akun:</strong></p>
+          <ul>
+            <li>Akun Google pengguna (Firebase UID) akan dihapus secara permanen dari sistem autentikasi kami.</li>
+            <li>Seluruh riwayat Trah keluarga yang Anda buat (*Creator/Owner*) akan dihapus dari server cloud Firestore.</li>
+            <li>Tautan profil Anda pada simpul silsilah keluarga kerabat akan dilepas (*unlinked*).</li>
+            <li>Tindakan ini bersifat permanen dan data yang telah dihapus tidak dapat dipulihkan kembali.</li>
+          </ul>
+        </div>
+
+        <h2>2. Formulir Permintaan Penghapusan Data</h2>
+        <div class="form-box">
+          <form onsubmit="handleFormSubmit(event, 'id')">
+            <div class="form-group">
+              <label for="email-id">Alamat Email Akun Terdaftar *</label>
+              <input type="email" id="email-id" required placeholder="Contoh: user@gmail.com">
+            </div>
+
+            <div class="form-group">
+              <label for="trah-id">Nama Trah / Silsilah Keluarga (Opsional)</label>
+              <input type="text" id="trah-id" placeholder="Contoh: Trah Bani Ahmad">
+            </div>
+
+            <div class="form-group">
+              <label for="reason-id">Alasan / Catatan Tambahan (Opsional)</label>
+              <textarea id="reason-id" rows="3" placeholder="Tuliskan catatan tambahan jika ada..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">
+              🗑️ Kirim Permintaan Penghapusan Akun
+            </button>
+          </form>
+        </div>
+
+        <h2>3. Jangka Waktu Pemrosesan Data</h2>
+        <p>Setelah permohonan diterima dan diverifikasi:</p>
+        <ul>
+          <li>Data akun dan silsilah keluarga Anda akan dihapus secara menyeluruh dari basis data server Firestore dalam waktu <strong>7 hingga 14 hari kerja</strong>.</li>
+          <li>Kami tidak menyimpan data cadangan (*backup retention*) setelah proses pembersihan selesai.</li>
+        </ul>
+
+        <h2>4. Tautan Penting</h2>
+        <ul>
+          <li>Kebijakan Privasi Resmi: <a href="https://rozaqingsoon.github.io/prifacypolicy/sedulurku.html" target="_blank" rel="noopener">https://rozaqingsoon.github.io/prifacypolicy/sedulurku.html</a></li>
+          <li>Repositori Publik: <a href="https://github.com/RozaqIngsoon/prifacypolicy" target="_blank" rel="noopener">https://github.com/RozaqIngsoon/prifacypolicy</a></li>
+        </ul>
+      </section>
+
+      <!-- SEKSI ENGLISH -->
+      <section id="section-en" class="lang-section hidden">
+        <div class="info-box">
+          <p>
+            <strong>Application:</strong> Sedulurku (Digital Family Tree)<br>
+            <strong>Developer:</strong> Rozik-Bolu<br>
+            <strong>Support Contact:</strong> <a href="mailto:s3nyuman1s@gmail.com">s3nyuman1s@gmail.com</a>
+          </p>
+        </div>
+
+        <p>In accordance with Google Play's <em>Data Safety &amp; Account Deletion</em> requirement, this page allows users of the <strong>Sedulurku</strong> application to request the complete deletion of their account and associated genealogical records.</p>
+
+        <h2>1. How to Request Account Deletion</h2>
+        <h3>Option A: In-App Deletion</h3>
+        <ol>
+          <li>Open the <strong>Sedulurku</strong> app on your Android device.</li>
+          <li>Go to <strong>Group Management</strong> if you are the creator of the family tree.</li>
+          <li>Delete individual member nodes or purge the entire family tree you created.</li>
+          <li>Sign out from your account.</li>
+        </ol>
+
+        <h3>Option B: Web / Email Deletion Request</h3>
+        <p>If you have uninstalled the app or wish to permanently erase your account credentials (Firebase UID) and cloud records from our server, submit the form below or contact <a href="mailto:s3nyuman1s@gmail.com">s3nyuman1s@gmail.com</a>.</p>
+
+        <div class="warning-box">
+          <p><strong>⚠️ What Happens Upon Deletion:</strong></p>
+          <ul>
+            <li>Your Google user profile and Firebase UID will be permanently removed.</li>
+            <li>Family trees created under your account will be purged from Google Cloud Firestore.</li>
+            <li>Any linkages between your user profile and family tree nodes will be unlinked.</li>
+            <li>This action cannot be undone.</li>
+          </ul>
+        </div>
+
+        <h2>2. Data Deletion Request Form</h2>
+        <div class="form-box">
+          <form onsubmit="handleFormSubmit(event, 'en')">
+            <div class="form-group">
+              <label for="email-en">Registered Google Email Address *</label>
+              <input type="email" id="email-en" required placeholder="example: user@gmail.com">
+            </div>
+
+            <div class="form-group">
+              <label for="trah-en">Family Tree Name (Optional)</label>
+              <input type="text" id="trah-en" placeholder="example: The Smith Family Tree">
+            </div>
+
+            <div class="form-group">
+              <label for="reason-en">Reason / Notes (Optional)</label>
+              <textarea id="reason-en" rows="3" placeholder="Optional notes..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">
+              🗑️ Submit Account Deletion Request
+            </button>
+          </form>
+        </div>
+
+        <h2>3. Data Retention &amp; Timeframe</h2>
+        <p>Once your request is received:</p>
+        <ul>
+          <li>All account data and database records will be permanently erased within <strong>7 to 14 business days</strong>.</li>
+          <li>No retained copies or backups will be maintained past the deletion process.</li>
+        </ul>
+
+        <h2>4. Important Links</h2>
+        <ul>
+          <li>Privacy Policy: <a href="https://rozaqingsoon.github.io/prifacypolicy/sedulurku.html" target="_blank" rel="noopener">https://rozaqingsoon.github.io/prifacypolicy/sedulurku.html</a></li>
+          <li>GitHub Repository: <a href="https://github.com/RozaqIngsoon/prifacypolicy" target="_blank" rel="noopener">https://github.com/RozaqIngsoon/prifacypolicy</a></li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Sedulurku by Rozik-Bolu. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function switchLanguage(lang) {
+      const secId = document.getElementById('section-id');
+      const secEn = document.getElementById('section-en');
+      const btnId = document.getElementById('btn-id');
+      const btnEn = document.getElementById('btn-en');
+      const title = document.getElementById('page-title');
+
+      if (lang === 'en') {
+        secId.classList.add('hidden');
+        secEn.classList.remove('hidden');
+        btnEn.classList.add('active');
+        btnId.classList.remove('active');
+        title.innerText = 'Account & Data Deletion Request';
+      } else {
+        secEn.classList.add('hidden');
+        secId.classList.remove('hidden');
+        btnId.classList.add('active');
+        btnEn.classList.remove('active');
+        title.innerText = 'Permintaan Penghapusan Akun & Data';
+      }
+    }
+
+    function handleFormSubmit(e, lang) {
+      e.preventDefault();
+      let email = '';
+      let trah = '';
+      let reason = '';
+
+      if (lang === 'en') {
+        email = document.getElementById('email-en').value.trim();
+        trah = document.getElementById('trah-en').value.trim();
+        reason = document.getElementById('reason-en').value.trim();
+      } else {
+        email = document.getElementById('email-id').value.trim();
+        trah = document.getElementById('trah-id').value.trim();
+        reason = document.getElementById('reason-id').value.trim();
+      }
+
+      if (!email) {
+        alert(lang === 'en' ? 'Please enter your registered email.' : 'Silakan masukkan email akun Anda.');
+        return;
+      }
+
+      const subject = encodeURIComponent(
+        lang === 'en'
+          ? `[Sedulurku] Data Deletion Request: ${email}`
+          : `[Sedulurku] Permintaan Penghapusan Akun: ${email}`
+      );
+
+      const bodyText = encodeURIComponent(
+        (lang === 'en'
+          ? `Dear Sedulurku Developer Team,\n\nI would like to request the permanent deletion of my account and associated data.\n\nRegistered Email: ${email}\nFamily Tree Name: ${trah || '-'}\nReason/Notes: ${reason || '-'}\n\nThank you.`
+          : `Yth. Tim Pengembang Sedulurku,\n\nSaya ingin mengajukan permohonan penghapusan permanen atas akun dan data saya.\n\nEmail Terdaftar: ${email}\nNama Trah/Pohon: ${trah || '-'}\nAlasan/Catatan: ${reason || '-'}\n\nTerima kasih.`)
+      );
+
+      const mailtoUrl = `mailto:s3nyuman1s@gmail.com?subject=${subject}&body=${bodyText}`;
+      window.location.href = mailtoUrl;
+    }
+  </script>
+</body>
+
+</html>
